@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Input from './Input'
 import Preview from './Preview';
 import './styles.css'
+import Footer from './Footer';
 
 const initialContent = `
 # Hi!  
@@ -35,6 +36,7 @@ const MarkdownPreviewer = () => {
         <div className='container' id='content'>
             <Input text={content} setText={setContent} />
             <Preview markdown={content} />
+            <Footer />
         </div>
     );
 }
