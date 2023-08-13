@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Input from './Input'
 import Preview from './Preview';
-import './styles.css'
 import Footer from './Footer';
+// import './styles.css'
+import './previewer.css'
 
 const initialContent = `
 # Hi!  
@@ -17,6 +18,7 @@ const initialContent = `
 \`\`\`
 const showMultiline = (event) => {
     event.preventDefault()
+    showCode(event)
 }
 \`\`\`
 > Amazing, innit?
@@ -33,9 +35,11 @@ const MarkdownPreviewer = () => {
     const [content, setContent] = useState(initialContent);
 
     return (
-        <div className='container' id='content'>
-            <Input text={content} setText={setContent} />
-            <Preview markdown={content} />
+        <div className="wrapper">
+            <div className='container' id='content'>
+                <Input text={content} setText={setContent} />
+                <Preview markdown={content} />
+            </div>
             <Footer />
         </div>
     );

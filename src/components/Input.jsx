@@ -7,8 +7,10 @@ const Input = ({ text, setText }) => {
     }
 
     return (
-        <div className='column'>
-            <h4 className='title'>Input</h4>
+        <div className='column column-1'>
+            <div className='title'>
+                <span>Markdown</span>
+            </div>
             <div className='editor-wrapper'>
                 <textarea 
                     className='editor'

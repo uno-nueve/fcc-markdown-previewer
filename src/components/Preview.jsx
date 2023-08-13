@@ -8,8 +8,10 @@ marked.use({
 
 const Preview = ({ markdown }) => {
     return (
-        <div className='column'>
-            <h4 className='title'>Preview</h4>
+        <div className='column column-2'>
+            <div className='title'>
+                <span>Preview</span>
+            </div>
             <div className='preview-wrapper'>
                 <div 
                     className='preview' 
